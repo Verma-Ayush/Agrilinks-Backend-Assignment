@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 //DB_URI can be changed from config file.
+//for using local storage, DB_URI = "mongodb://localhost:27017/Ecommerce" in config file.
 const connectDatabase = async () => {
   try {
     const data = await mongoose.connect(process.env.DB_URI, {
