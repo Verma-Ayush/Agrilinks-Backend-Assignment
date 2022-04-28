@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-//Not writing try-catch block or catchAsyncError here, coz we are handling the error in Unhandled Promise Rejection in server.
+//DB_URI can be changed from config file.
 const connectDatabase = async () => {
   try {
     const data = await mongoose.connect(process.env.DB_URI, {
